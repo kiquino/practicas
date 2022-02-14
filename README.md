@@ -8,3 +8,5 @@ Principalmente objetivos cortos, secciónes independientes de un contexto comerc
   - Covid Api Request **React**
   - MercadoLibre consultas sql **PHP SQL**
   - Lenovo **HTML/CSS** 
+  - Domo **Javascript Api**
+  - Trailers **Adobe Xd**
