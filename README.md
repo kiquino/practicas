@@ -1,4 +1,4 @@
-# practicas
+# Prácticas
 Practicas laborales y ejercicios de profundización de conceptos
 
 ## Que tipo de proyectos hay acá?
