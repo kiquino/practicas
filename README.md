@@ -1,10 +1,9 @@
-# practicas
-Practicas laborales y ejercicios de profundización de conceptos
+# Práctica profesional Domo
+Ejercicio de selección. sencillisima llamada a api de dolarhoy.
 
-## Que tipo de proyectos hay acá?
-Principalmente objetivos cortos, secciónes independientes de un contexto comercial o publicitario.
+## Cuál era la consigna?
+Conseguir y traer una api en javascript y refrescarla cada 5 segundos con un cambio de fondo de color al mismo tiempo.
 
-### Indice de Branches
-  - Covid Api Request **React**
-  - MercadoLibre consultas sql **PHP SQL**
-  - Lenovo **HTML/CSS** 
+### Devolución
+ 
+ Lamentablemente no obtuve devolución. 
