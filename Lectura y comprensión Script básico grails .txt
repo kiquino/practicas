@@ -1,0 +1,21 @@
+El enunciado comienza buscando importar los elementos de mercadoenvios. 
+define una variable upsPullTrkService que contiene una instancia 'upsPullTrkService'
+Obtiene el trackingNumber y lo almacena en tn
+define trackingData, guarda el metodo de upsPullTrkService, TrkEvent, correspiente a tn
+
+Por último imprime los indices correspondientes al tn
+
+Enunciado: ->
+
+import mercadoenvios.*;
+def upsPullTrkService = ctx.getBean('upsPullTrkService')
+def s = Shipment.get(27528954729)
+def tn = s.trackingNumber
+def trackingData = upsPullTrkService.getTrkEvents([tn])
+trackingData.each { td ->
+println "------------------------------------------------"
+println "${td.sucursal} - ${td.eventDate} - ${td.description}"
+}
+"Done"
+ 
+ <-

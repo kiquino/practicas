@@ -1,0 +1,12 @@
+ID: 12
+ Nombre: Piano
+id de categoria: 1
+Categoría: Música
+ID: 12
+ Nombre: Silla
+id de categoria: 2
+Categoría: Muebles
+ID: 223
+ Nombre: Flauta
+id de categoria: 1
+Categoría: Música
