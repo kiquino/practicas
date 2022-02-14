@@ -1,10 +1,6 @@
-# practicas
-Practicas laborales y ejercicios de profundización de conceptos
+# practicas Profesional Lenovo
+Este ejercicio fue hecho utilizando scripts, scss y html solamente, se agregó una librería pero no se utilizó.
 
-## Que tipo de proyectos hay acá?
-Principalmente objetivos cortos, secciónes independientes de un contexto comercial o publicitario.
+Fue realizado en 2 días con el concepto de crear un nuevo diseño al sitio original.
 
-### Indice de Branches
-  - Covid Api Request **React**
-  - MercadoLibre consultas sql **PHP SQL**
-  - Lenovo **HTML/CSS** 
+La devolución fue constructiva y estoy muy agradecido de poder participar de la selección.
