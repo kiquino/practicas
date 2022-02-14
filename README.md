@@ -6,3 +6,4 @@ Principalmente objetivos cortos, secciónes independientes de un contexto comerc
 
 ### Indice de Branches
   - Covid Api Request **React**
+  - MercadoLibre consultas sql **PHP SQL**
