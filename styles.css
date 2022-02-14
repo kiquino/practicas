@@ -1,0 +1,1611 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@-webkit-keyframes navAnimation {
+  0% {
+    height: 0;
+    display: none;
+  }
+  50% {
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    display: -webkit-box;
+    display: flex;
+    height: 12em;
+  }
+}
+
+@keyframes navAnimation {
+  0% {
+    height: 0;
+    display: none;
+  }
+  50% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 12em;
+  }
+}
+
+@-webkit-keyframes navAnimationreverse {
+  0% {
+    height: 12em;
+  }
+  100% {
+    height: 0em;
+  }
+}
+
+@keyframes navAnimationreverse {
+  0% {
+    height: 12em;
+  }
+  100% {
+    height: 0em;
+  }
+}
+
+@-webkit-keyframes btnNavAnimation {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 50%;
+  }
+}
+
+@keyframes btnNavAnimation {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 50%;
+  }
+}
+
+@-webkit-keyframes absoluteAnimation {
+  0% {
+    max-height: 3em;
+  }
+  100% {
+    max-height: 9em;
+  }
+}
+
+@keyframes absoluteAnimation {
+  0% {
+    max-height: 3em;
+  }
+  100% {
+    max-height: 9em;
+  }
+}
+
+@-webkit-keyframes absoluteAnimationReverse {
+  0% {
+    max-height: 9em;
+  }
+  100% {
+    max-height: 3em;
+  }
+}
+
+@keyframes absoluteAnimationReverse {
+  0% {
+    max-height: 9em;
+  }
+  100% {
+    max-height: 3em;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header .lenovo-logo {
+  background-color: #e2231a;
+  width: 3rem;
+  min-height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .lenovo-logo p {
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+}
+
+header .lenovo-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header .lenovo-menu .nav-btn {
+  width: 2em;
+  height: 2em;
+  margin: .5em;
+  border: 2px solid #8a8a8a;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 0;
+}
+
+header .lenovo-menu .nav-btn div {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 2px solid #8a8a8a;
+}
+
+header .lenovo-menu nav {
+  width: 100%;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .lenovo-menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header .lenovo-menu nav ul a {
+  text-decoration: none;
+  color: #8a8a8a;
+}
+
+header .lenovo-menu nav ul a:hover {
+  color: black;
+}
+
+header .lenovo-menu nav ul a li {
+  list-style: none;
+  margin-right: 1rem;
+  font-size: .8rem;
+}
+
+header .lenovo-menu nav ul a li:hover {
+  cursor: pointer;
+}
+
+header .lenovo-menu nav ul a li:nth-child(1) {
+  margin-left: .5rem;
+}
+
+header .lenovo-menu nav input {
+  font-size: .8rem;
+}
+
+header .lenovo-menu nav .info-contact {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: .8rem;
+  color: #8a8a8a;
+  padding-right: 1em;
+}
+
+header .lenovo-menu nav .info-contact .support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+header .lenovo-menu nav .info-contact .support a {
+  color: #8a8a8a;
+  text-decoration: none;
+  margin: 0 .5rem;
+}
+
+header .lenovo-menu nav .info-contact .support .chat {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #8a8a8a;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+header .lenovo-menu nav .info-contact .personal-service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .lenovo-menu nav .info-contact .personal-service .user {
+  width: .7rem;
+  height: .7rem;
+  border: 1px solid #8a8a8a;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+header .lenovo-menu nav .info-contact .personal-service .user:hover {
+  cursor: pointer;
+}
+
+header .lenovo-menu nav .info-contact .personal-service .cart {
+  width: .7rem;
+  height: .7rem;
+  border: 1px solid #8a8a8a;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+header .lenovo-menu .banner {
+  width: 100%;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(assets/imgs/bg-banner1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-left: 1em;
+  overflow: hidden;
+}
+
+header .lenovo-menu .banner h1 {
+  font-size: 3.5rem;
+}
+
+header .lenovo-menu .banner p {
+  padding-left: 1em;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+header .lenovo-menu .banner .img {
+  margin-left: auto;
+  -webkit-transform: rotate(8deg) translateX(2rem);
+          transform: rotate(8deg) translateX(2rem);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(assets/imgs/banner-img.png);
+  height: 9rem;
+  width: 9rem;
+}
+
+.categories {
+  width: 100%;
+  min-height: 3rem;
+  background-color: #fafafa;
+  padding: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.categories .btn-absolute {
+  display: none;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 2px solid #8a8a8a;
+}
+
+.categories .btn-absolute:hover {
+  cursor: pointer;
+}
+
+.categories .btn-absolute div {
+  border-top: 2px solid #8a8a8a;
+  height: 2px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.categories .active {
+  border-bottom: 3px solid #e2231a;
+}
+
+.categories .active .name p {
+  color: #e2231a !important;
+  font-weight: bold !important;
+}
+
+.categories .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 6rem;
+  height: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.categories .article:hover {
+  border-bottom: 3px solid #e2231a;
+  cursor: pointer;
+}
+
+.categories .article:nth-child(1) {
+  margin-left: 0;
+}
+
+.categories .article:nth-child(8) {
+  margin-right: 0;
+}
+
+.categories .article .img {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categories .article .img img {
+  height: auto;
+  width: 2.5rem;
+}
+
+.categories .article .name {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.categories .article .name p {
+  font-size: .8rem;
+  color: black;
+}
+
+.categories .article:hover {
+  color: #e2231a;
+}
+
+main {
+  width: 100%;
+  padding: 0 3rem;
+  margin-bottom: 4rem;
+}
+
+main .banner {
+  width: auto;
+  background-color: #6178f7;
+  min-height: 3rem;
+  margin: 1.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .banner p {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+main .shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main .shop .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 25%;
+  min-width: 15em;
+  height: auto;
+  min-height: 10rem;
+  background-color: #fafafa;
+  border-right: 1px solid #dfdfdf;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+main .shop .article:nth-child(4) {
+  border-left: 1px solid #dfdfdf;
+}
+
+main .shop .article .label {
+  width: 60%;
+  margin: 1rem auto;
+  height: 1rem;
+  background-color: #6178f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .shop .article .label p {
+  font-weight: lighter;
+  font-size: .8rem;
+  color: white;
+}
+
+main .shop .article .article-img {
+  width: 60%;
+  height: 8rem;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+main .shop .article .article-img img {
+  width: auto;
+  height: inherit;
+}
+
+main .shop .article .title {
+  margin: .5rem auto;
+  width: 100%;
+}
+
+main .shop .article .title .name {
+  color: #6178f7;
+  font-size: 1.1rem;
+}
+
+main .shop .article .title .slogan {
+  color: #8a8a8a;
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+main .shop .article .tag .statement {
+  font-size: .8rem;
+}
+
+main .shop .article .tag .price {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+main .shop .article .tag .discount {
+  font-size: .8rem;
+  font-weight: lighter;
+}
+
+main .shop .article .tag .coupon {
+  font-size: .8rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+main .shop .article .tag .shipping {
+  font-size: .8rem;
+  font-weight: bold;
+  margin-bottom: .2rem;
+}
+
+main .shop .article .tag .free {
+  color: #e2231a;
+}
+
+main .shop .article .tag .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+main .shop .article .tag .rating p {
+  font-size: 1rem;
+  color: #e2231a;
+}
+
+main .shop .article .tag .rating p:nth-child(2) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8rem;
+  color: black;
+}
+
+main .shop .article .btn-shop {
+  background-color: #3a9eaf;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  width: 60%;
+  height: 2rem;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+}
+
+main .shop .article .btn-shop:hover {
+  background-color: #318486;
+  cursor: pointer;
+}
+
+main .shop .article .specs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+main .shop .article .specs .specs-element {
+  border-bottom: 1px solid #dfdfdf;
+  text-align: left;
+  padding: .5rem 0;
+  font-size: .9rem;
+  line-height: .8rem;
+}
+
+main .shop .article .specs .specs-element:nth-child(5) {
+  border-bottom: none;
+}
+
+main .shop .article .specs .specs-element .title {
+  color: #8a8a8a;
+}
+
+main .shop .article .specs .specs-element .data-element {
+  color: black;
+}
+
+main .shop .article .specs .extra {
+  text-align: left;
+  margin-top: .4rem;
+}
+
+main .shop .article .specs .extra a {
+  text-decoration: none;
+  color: #6178f7;
+}
+
+main .shop .article .specs .extra a:hover {
+  text-decoration: underline;
+}
+
+.compressed-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 750px) {
+  main {
+    width: 100%;
+    padding: 0 3rem;
+    margin-bottom: 4rem;
+  }
+  main .banner {
+    width: auto;
+    background-color: #6178f7;
+    min-height: 3rem;
+    margin: 1.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .banner p {
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+  main .shop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .shop .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 25%;
+    min-width: 15em;
+    height: auto;
+    min-height: 10rem;
+    background-color: #fafafa;
+    border-right: 1px solid #dfdfdf;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  main .shop .article:nth-child(4) {
+    border-left: 1px solid #dfdfdf;
+  }
+  main .shop .article .label {
+    width: 60%;
+    margin: 1rem auto;
+    height: 1rem;
+    background-color: #6178f7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .shop .article .label p {
+    font-weight: lighter;
+    font-size: .8rem;
+    color: white;
+  }
+  main .shop .article .article-img {
+    width: 60%;
+    height: 8rem;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  main .shop .article .title {
+    margin: .5rem auto;
+    width: 100%;
+  }
+  main .shop .article .title .name {
+    color: #6178f7;
+    font-size: 1.1rem;
+  }
+  main .shop .article .title .slogan {
+    color: #8a8a8a;
+    font-size: .8rem;
+    font-weight: lighter;
+  }
+  main .shop .article .tag .statement {
+    font-size: .8rem;
+  }
+  main .shop .article .tag .price {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  main .shop .article .tag .discount {
+    font-size: .8rem;
+    font-weight: lighter;
+  }
+  main .shop .article .tag .coupon {
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+  main .shop .article .tag .shipping {
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: .2rem;
+  }
+  main .shop .article .tag .free {
+    color: #e2231a;
+  }
+  main .shop .article .tag .rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  main .shop .article .tag .rating p {
+    font-size: 1rem;
+    color: #e2231a;
+  }
+  main .shop .article .tag .rating p:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: .8rem;
+    color: black;
+  }
+  main .shop .article .btn-shop {
+    background-color: #3a9eaf;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    width: 60%;
+    height: 2rem;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 8px;
+  }
+  main .shop .article .btn-shop:hover {
+    background-color: #318486;
+    cursor: pointer;
+  }
+  main .shop .article .specs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+  main .shop .article .specs .specs-element {
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+    padding: .5rem 0;
+    font-size: .9rem;
+    line-height: .8rem;
+  }
+  main .shop .article .specs .specs-element:nth-child(5) {
+    border-bottom: none;
+  }
+  main .shop .article .specs .specs-element .title {
+    color: #8a8a8a;
+  }
+  main .shop .article .specs .specs-element .data-element {
+    color: black;
+  }
+  main .shop .article .specs .extra {
+    text-align: left;
+    margin-top: .4rem;
+  }
+  main .shop .article .specs .extra a {
+    text-decoration: none;
+    color: #6178f7;
+  }
+  main .shop .article .specs .extra a:hover {
+    text-decoration: underline;
+  }
+  header .lenovo-menu .nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: inherit;
+  }
+  header .lenovo-menu .nav-btn:hover {
+    cursor: pointer;
+  }
+  header .lenovo-menu .banner {
+    overflow: hidden;
+  }
+  header .lenovo-menu .banner h1 {
+    font-size: 1.5rem;
+  }
+  header .lenovo-menu .banner p {
+    padding-left: 1em;
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  header .lenovo-menu nav {
+    width: 100%;
+    height: 0em;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 1em;
+    overflow-y: hidden;
+  }
+  header .lenovo-menu nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .lenovo-menu nav ul a li {
+    list-style: none;
+    margin-right: 0;
+    margin-bottom: 1em;
+    font-size: .8rem;
+  }
+  header .lenovo-menu nav ul a li:nth-child(1) {
+    margin-left: 0;
+  }
+  header .lenovo-menu nav ul li {
+    list-style: none;
+    margin-right: 0;
+    font-size: .8rem;
+  }
+  header .lenovo-menu nav ul li:nth-child(1) {
+    margin-left: 0;
+  }
+  header .lenovo-menu nav input {
+    margin: 1em 0;
+    font-size: .8rem;
+  }
+  header .lenovo-menu nav .info-contact {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: .8rem;
+    color: #8a8a8a;
+    padding-right: 0;
+  }
+  header .lenovo-menu nav .info-contact .support {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  header .lenovo-menu nav .info-contact .support a {
+    color: #8a8a8a;
+    text-decoration: none;
+    margin: 0 .5rem;
+  }
+  header .lenovo-menu nav .info-contact .support .chat {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #8a8a8a;
+    border-radius: 50%;
+    margin-right: .5rem;
+  }
+  header .lenovo-menu nav .info-contact .personal-service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .lenovo-menu nav .info-contact .personal-service .user {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #8a8a8a;
+    border-radius: 50%;
+    margin-right: .5rem;
+  }
+  header .lenovo-menu nav .info-contact .personal-service .cart {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #8a8a8a;
+    border-radius: 0;
+  }
+  .categories {
+    width: 100%;
+    max-height: 3rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .categories .btn-absolute {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .categories .active {
+    border-bottom: 3px solid #e2231a;
+  }
+  .categories .active .name {
+    color: #e2231a;
+    font-weight: bold;
+  }
+  .categories .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 6rem;
+    height: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .categories .article:hover {
+    border-bottom: 3px solid #e2231a;
+    cursor: pointer;
+  }
+  .categories .article:nth-child(1) {
+    margin-left: 0;
+  }
+  .categories .article:nth-child(8) {
+    margin-right: 0;
+  }
+  .categories .article .img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .categories .article .name {
+    width: 3rem;
+    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .categories .article .name p {
+    font-size: .8rem;
+    color: black;
+  }
+  .categories .article:hover {
+    color: #e2231a;
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    width: 100%;
+    padding: 0 3rem;
+    margin-bottom: 4rem;
+  }
+  main .banner {
+    width: auto;
+    background-color: #6178f7;
+    min-height: 3rem;
+    margin: 1.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .banner p {
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+  main .shop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .shop .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 25%;
+    min-width: 15em;
+    height: auto;
+    min-height: 10rem;
+    background-color: #fafafa;
+    border-right: 1px solid #dfdfdf;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  main .shop .article:nth-child(4) {
+    border-left: 1px solid #dfdfdf;
+  }
+  main .shop .article .label {
+    width: 60%;
+    margin: 1rem auto;
+    height: 1rem;
+    background-color: #6178f7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .shop .article .label p {
+    font-weight: lighter;
+    font-size: .8rem;
+    color: white;
+  }
+  main .shop .article .article-img {
+    width: 60%;
+    height: 8rem;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+  main .shop .article .title {
+    margin: .5rem auto;
+    width: 100%;
+  }
+  main .shop .article .title .name {
+    color: #6178f7;
+    font-size: 1.1rem;
+  }
+  main .shop .article .title .slogan {
+    color: #8a8a8a;
+    font-size: .8rem;
+    font-weight: lighter;
+  }
+  main .shop .article .tag .statement {
+    font-size: .8rem;
+  }
+  main .shop .article .tag .price {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  main .shop .article .tag .discount {
+    font-size: .8rem;
+    font-weight: lighter;
+  }
+  main .shop .article .tag .coupon {
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+  main .shop .article .tag .shipping {
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: .2rem;
+  }
+  main .shop .article .tag .free {
+    color: #e2231a;
+  }
+  main .shop .article .tag .rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  main .shop .article .tag .rating p {
+    font-size: 1rem;
+    color: #e2231a;
+  }
+  main .shop .article .tag .rating p:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: .8rem;
+    color: black;
+  }
+  main .shop .article .btn-shop {
+    background-color: #3a9eaf;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    width: 60%;
+    height: 2rem;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 8px;
+  }
+  main .shop .article .btn-shop:hover {
+    background-color: #318486;
+    cursor: pointer;
+  }
+  main .shop .article .specs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+  main .shop .article .specs .specs-element {
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+    padding: .5rem 0;
+    font-size: .9rem;
+    line-height: .8rem;
+  }
+  main .shop .article .specs .specs-element:nth-child(5) {
+    border-bottom: none;
+  }
+  main .shop .article .specs .specs-element .title {
+    color: #8a8a8a;
+  }
+  main .shop .article .specs .specs-element .data-element {
+    color: black;
+  }
+  main .shop .article .specs .extra {
+    text-align: left;
+    margin-top: .4rem;
+  }
+  main .shop .article .specs .extra a {
+    text-decoration: none;
+    color: #6178f7;
+  }
+  main .shop .article .specs .extra a:hover {
+    text-decoration: underline;
+  }
+  header .lenovo-menu .nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: inherit;
+  }
+  header .lenovo-menu .nav-btn:hover {
+    cursor: pointer;
+  }
+  header .lenovo-menu .banner {
+    overflow: hidden;
+    min-width: 280px;
+  }
+  header .lenovo-menu .banner h1 {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  header .lenovo-menu .banner p {
+    padding-left: 1em;
+    font-size: 1rem;
+    font-weight: lighter;
+    width: 50%;
+  }
+  header .lenovo-menu nav {
+    width: 100%;
+    height: 0em;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 1em;
+    overflow-y: hidden;
+  }
+  header .lenovo-menu nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .lenovo-menu nav ul a li {
+    list-style: none;
+    margin-right: 0;
+    font-size: .8rem;
+  }
+  header .lenovo-menu nav ul a li:nth-child(1) {
+    margin-left: 0;
+  }
+  header .lenovo-menu nav ul li {
+    list-style: none;
+    margin-right: 0;
+    font-size: .8rem;
+  }
+  header .lenovo-menu nav ul li:nth-child(1) {
+    margin-left: 0;
+  }
+  header .lenovo-menu nav input {
+    margin: 1em 0;
+    font-size: .8rem;
+  }
+  header .lenovo-menu nav .info-contact {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: .8rem;
+    color: #8a8a8a;
+    padding-right: 0;
+  }
+  header .lenovo-menu nav .info-contact .support {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  header .lenovo-menu nav .info-contact .support a {
+    color: #8a8a8a;
+    text-decoration: none;
+    margin: 0 .5rem;
+  }
+  header .lenovo-menu nav .info-contact .support .chat {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #8a8a8a;
+    border-radius: 50%;
+    margin-right: .5rem;
+  }
+  header .lenovo-menu nav .info-contact .personal-service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .lenovo-menu nav .info-contact .personal-service .user {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #8a8a8a;
+    border-radius: 50%;
+    margin-right: .5rem;
+  }
+  header .lenovo-menu nav .info-contact .personal-service .cart {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #8a8a8a;
+    border-radius: 0;
+  }
+  .categories {
+    width: 100%;
+    max-height: 3rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  .categories .btn-absolute {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .categories .active {
+    border-bottom: 3px solid #e2231a;
+  }
+  .categories .active .name {
+    color: #e2231a;
+    font-weight: bold;
+  }
+  .categories .article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 6rem;
+    height: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .categories .article:hover {
+    border-bottom: 3px solid #e2231a;
+    cursor: pointer;
+  }
+  .categories .article:nth-child(1) {
+    margin-left: 0;
+  }
+  .categories .article:nth-child(8) {
+    margin-right: 0;
+  }
+  .categories .article .img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .categories .article .name {
+    width: 3rem;
+    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .categories .article .name p {
+    font-size: .8rem;
+    color: black;
+  }
+  .categories .article:hover {
+    color: #e2231a;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

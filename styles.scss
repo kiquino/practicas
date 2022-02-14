@@ -1,0 +1,1461 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+//Color pallets//
+
+$lenovo-red: #e2231a;
+$light-gray: #8a8a8a;
+$lighter-gray:#dfdfdf;
+$whiteish:#fafafa;
+$blue:#6178f7;
+
+//Color pallets//
+
+//Animations//
+@keyframes navAnimation {
+    0% {
+        height: 0;
+        display: none;
+    }
+
+    50% {
+        display: flex;
+    }
+
+    100% {
+        display: flex;
+        height: 12em;
+    }
+}
+
+@keyframes navAnimationreverse {
+    0% {
+        height: 12em;
+
+    }
+
+
+
+    100% {
+
+        height: 0em;
+    }
+}
+
+@keyframes btnNavAnimation {
+    from {
+        border-radius: 0;
+    }
+
+    to {
+        border-radius: 50%;
+    }
+}
+
+@keyframes absoluteAnimation {
+    0% {
+        max-height: 3em;
+    }
+
+    100% {
+        max-height: 9em;
+    }
+}
+
+@keyframes absoluteAnimationReverse {
+    0% {
+        max-height: 9em;
+    }
+
+    100% {
+        max-height: 3em;
+    }
+}
+
+//Animations//
+body {
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+
+    .lenovo-logo {
+        background-color: $lenovo-red;
+        width: 3rem;
+        min-height: 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: bold;
+            color: white;
+            font-size: 1.5rem;
+            transform: rotateZ(-90deg);
+        }
+    }
+
+    .lenovo-menu {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+
+        .nav-btn {
+            width: 2em;
+            height: 2em;
+            margin: .5em;
+            border: 2px solid $light-gray;
+            display: none;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border-radius: 0;
+
+            div {
+                width: 80%;
+                margin: 0 auto;
+                border-top: 2px solid $light-gray;
+            }
+        }
+
+        nav {
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+
+                a {
+                    text-decoration: none;
+                    color: $light-gray;
+
+                    &:hover {
+                        color: black;
+                    }
+
+                    li {
+                        list-style: none;
+                        margin-right: 1rem;
+                        font-size: .8rem;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &:nth-child(1) {
+                            margin-left: .5rem;
+                        }
+                    }
+                }
+            }
+
+            input {
+                font-size: .8rem;
+
+            }
+
+
+
+            .info-contact {
+                margin-left: auto;
+                display: flex;
+                flex-direction: column;
+                font-size: .8rem;
+                color: $light-gray;
+                padding-right: 1em;
+
+                .support {
+                    display: flex;
+                    flex-flow: row nowrap;
+
+                    a {
+                        color: $light-gray;
+                        text-decoration: none;
+                        margin: 0 .5rem;
+                    }
+
+                    .chat {
+                        width: 1rem;
+                        height: 1rem;
+                        border: 1px solid $light-gray;
+                        border-radius: 50%;
+                        margin-right: .5rem;
+                    }
+                }
+
+                .personal-service {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-end;
+
+                    .user {
+                        width: .7rem;
+                        height: .7rem;
+                        border: 1px solid $light-gray;
+                        border-radius: 50%;
+                        margin-right: .5rem;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .cart {
+                        width: .7rem;
+                        height: .7rem;
+                        border: 1px solid $light-gray;
+                        border-radius: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .banner {
+            width: 100%;
+
+            height: 5rem;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            background-image: url(assets/imgs/bg-banner1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            padding-left: 1em;
+            overflow: hidden;
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            p {
+                padding-left: 1em;
+                font-size: 1rem;
+                font-weight: lighter;
+            }
+
+            .img {
+                margin-left: auto;
+                transform: rotate(8deg) translateX(2rem);
+
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(assets/imgs/banner-img.png);
+                height: 9rem;
+                width: 9rem;
+
+
+            }
+        }
+
+
+    }
+
+
+}
+
+.categories {
+    width: 100%;
+    min-height: 3rem;
+    background-color: $whiteish;
+    padding: 0 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    position: relative;
+
+    .btn-absolute {
+        display: none;
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        top: .5em;
+        left: .5em;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: 2px solid $light-gray;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        div {
+            border-top: 2px solid $light-gray;
+            height: 2px;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .active {
+        border-bottom: 3px solid $lenovo-red;
+
+        .name {
+            p {
+                color: $lenovo-red !important;
+                font-weight: bold !important;
+            }
+
+        }
+    }
+
+    .article {
+        display: flex;
+        flex-direction: row;
+        width: 6rem;
+        height: 3rem;
+
+        align-items: center;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        &:hover {
+            border-bottom: 3px solid $lenovo-red;
+            cursor: pointer;
+        }
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &:nth-child(8) {
+            margin-right: 0;
+        }
+
+        .img {
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: auto;
+                width: 2.5rem;
+            }
+        }
+
+        .name {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            p {
+                font-size: .8rem;
+                color: black;
+
+
+            }
+        }
+
+        &:hover {
+            color: $lenovo-red;
+        }
+    }
+
+
+
+}
+
+main {
+    width: 100%;
+    padding: 0 3rem;
+    margin-bottom: 4rem;
+
+    .banner {
+        width: auto;
+        background-color: #6178f7;
+        min-height: 3rem;
+        margin: 1.5em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            text-align: center;
+            width: 100%;
+            color: white;
+        }
+
+    }
+
+    .shop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+
+        .article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25%;
+            min-width: 15em;
+            height: auto;
+            min-height: 10rem;
+            background-color: $whiteish;
+            border-right: 1px solid $lighter-gray;
+            margin-bottom: 1em;
+
+            &:nth-child(4) {
+                border-left: 1px solid $lighter-gray;
+            }
+
+            .label {
+                width: 60%;
+                margin: 1rem auto;
+
+                height: 1rem;
+                background-color: $blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-weight: lighter;
+                    font-size: .8rem;
+                    color: white;
+                }
+            }
+
+            .article-img {
+                width: 60%;
+                height: 8rem;
+
+                margin: 0 auto;
+                margin-bottom: 1em;
+
+                img {
+                    width: auto;
+                    height: inherit;
+                }
+            }
+
+            text-align: center;
+
+            .title {
+                margin: .5rem auto;
+                width: 100%;
+
+                .name {
+                    color: $blue;
+                    font-size: 1.1rem;
+                }
+
+                .slogan {
+                    color: $light-gray;
+                    font-size: .8rem;
+                    font-weight: lighter;
+                }
+
+            }
+
+            .tag {
+                .statement {
+                    font-size: .8rem;
+                }
+
+                .price {
+                    font-size: 1rem;
+                    font-weight: lighter;
+                }
+
+                .discount {
+                    font-size: .8rem;
+                    font-weight: lighter;
+                }
+
+                .coupon {
+                    font-size: .8rem;
+                    font-weight: bold;
+                    margin-bottom: .5rem;
+                }
+
+                .shipping {
+                    font-size: .8rem;
+                    font-weight: bold;
+                    margin-bottom: .2rem;
+                }
+
+                .free {
+                    color: $lenovo-red;
+                }
+
+                .rating {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                    p {
+                        font-size: 1rem;
+                        color: $lenovo-red;
+
+                        &:nth-child(2) {
+                            align-items: center;
+                            font-size: .8rem;
+                            color: black
+                        }
+                    }
+                }
+
+
+            }
+
+            .btn-shop {
+                background-color: rgb(58, 158, 175);
+                color: white;
+                font-size: 1.1rem;
+                font-weight: lighter;
+                width: 60%;
+                height: 2rem;
+                margin: 0 auto;
+                align-items: center;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: #318486;
+                    cursor: pointer;
+
+                }
+            }
+
+            .specs {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                margin: 0 auto;
+
+                .specs-element {
+                    border-bottom: 1px solid $lighter-gray;
+                    text-align: left;
+                    padding: .5rem 0;
+                    font-size: .9rem;
+                    line-height: .8rem;
+
+                    &:nth-child(5) {
+                        border-bottom: none;
+                    }
+
+                    .title {
+                        color: $light-gray;
+                    }
+
+                    .data-element {
+                        color: black;
+                    }
+                }
+
+                .extra {
+                    text-align: left;
+                    margin-top: .4rem;
+
+                    a {
+                        text-decoration: none;
+                        color: $blue;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.compressed-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:750px) {
+    main {
+        width: 100%;
+        padding: 0 3rem;
+        margin-bottom: 4rem;
+
+        .banner {
+            width: auto;
+            background-color: #6178f7;
+            min-height: 3rem;
+            margin: 1.5em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+
+        }
+
+        .shop {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+
+            .article {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 25%;
+                min-width: 15em;
+                height: auto;
+                min-height: 10rem;
+                background-color: $whiteish;
+                border-right: 1px solid $lighter-gray;
+                margin-bottom: 1em;
+
+                &:nth-child(4) {
+                    border-left: 1px solid $lighter-gray;
+                }
+
+                .label {
+                    width: 60%;
+                    margin: 1rem auto;
+
+                    height: 1rem;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-weight: lighter;
+                        font-size: .8rem;
+                        color: white;
+                    }
+                }
+
+                .article-img {
+                    width: 60%;
+                    height: 8rem;
+
+                    margin: 0 auto;
+                    margin-bottom: 1em;
+                }
+
+                text-align: center;
+
+                .title {
+                    margin: .5rem auto;
+                    width: 100%;
+
+                    .name {
+                        color: $blue;
+                        font-size: 1.1rem;
+                    }
+
+                    .slogan {
+                        color: $light-gray;
+                        font-size: .8rem;
+                        font-weight: lighter;
+                    }
+
+                }
+
+                .tag {
+                    .statement {
+                        font-size: .8rem;
+                    }
+
+                    .price {
+                        font-size: 1rem;
+                        font-weight: lighter;
+                    }
+
+                    .discount {
+                        font-size: .8rem;
+                        font-weight: lighter;
+                    }
+
+                    .coupon {
+                        font-size: .8rem;
+                        font-weight: bold;
+                        margin-bottom: .5rem;
+                    }
+
+                    .shipping {
+                        font-size: .8rem;
+                        font-weight: bold;
+                        margin-bottom: .2rem;
+                    }
+
+                    .free {
+                        color: $lenovo-red;
+                    }
+
+                    .rating {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        margin-bottom: 1rem;
+
+                        p {
+                            font-size: 1rem;
+                            color: $lenovo-red;
+
+                            &:nth-child(2) {
+                                align-items: center;
+                                font-size: .8rem;
+                                color: black
+                            }
+                        }
+                    }
+
+
+                }
+
+                .btn-shop {
+                    background-color: rgb(58, 158, 175);
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: lighter;
+                    width: 60%;
+                    height: 2rem;
+                    margin: 0 auto;
+                    align-items: center;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    border-radius: 8px;
+
+                    &:hover {
+                        background-color: #318486;
+                        cursor: pointer;
+
+                    }
+                }
+
+                .specs {
+                    display: flex;
+                    flex-direction: column;
+                    width: 60%;
+                    margin: 0 auto;
+
+                    .specs-element {
+                        border-bottom: 1px solid $lighter-gray;
+                        text-align: left;
+                        padding: .5rem 0;
+                        font-size: .9rem;
+                        line-height: .8rem;
+
+                        &:nth-child(5) {
+                            border-bottom: none;
+                        }
+
+                        .title {
+                            color: $light-gray;
+                        }
+
+                        .data-element {
+                            color: black;
+                        }
+                    }
+
+                    .extra {
+                        text-align: left;
+                        margin-top: .4rem;
+
+                        a {
+                            text-decoration: none;
+                            color: $blue;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    header {
+        .lenovo-menu {
+            .nav-btn {
+                display: flex;
+                border-radius: inherit;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .banner {
+
+                overflow: hidden;
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    padding-left: 1em;
+                    font-size: 1rem;
+                    font-weight: lighter;
+                }
+
+
+            }
+
+            nav {
+                width: 100%;
+                height: 0em;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-left: 1em;
+                overflow-y: hidden;
+
+
+
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        li {
+                            list-style: none;
+                            margin-right: 0;
+                            margin-bottom: 1em;
+                            font-size: .8rem;
+
+
+
+                            &:nth-child(1) {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
+                    li {
+                        list-style: none;
+                        margin-right: 0;
+                        font-size: .8rem;
+
+
+
+                        &:nth-child(1) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                input {
+                    margin: 1em 0;
+                    font-size: .8rem;
+
+                }
+
+
+
+                .info-contact {
+                    margin-left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: .8rem;
+                    color: $light-gray;
+                    padding-right: 0;
+
+                    .support {
+                        display: flex;
+                        flex-flow: row nowrap;
+
+                        a {
+                            color: $light-gray;
+                            text-decoration: none;
+                            margin: 0 .5rem;
+                        }
+
+                        .chat {
+                            width: 1rem;
+                            height: 1rem;
+                            border: 1px solid $light-gray;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+                    }
+
+                    .personal-service {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: flex-end;
+
+                        .user {
+                            width: 1rem;
+                            height: 1rem;
+                            border: 1px solid $light-gray;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+
+                        .cart {
+                            width: 1rem;
+                            height: 1rem;
+                            border: 1px solid $light-gray;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .categories {
+        width: 100%;
+        max-height: 3rem;
+
+
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+
+        .btn-absolute {
+            display: flex;
+
+        }
+
+        .active {
+            border-bottom: 3px solid $lenovo-red;
+
+            .name {
+                color: $lenovo-red;
+                font-weight: bold;
+            }
+        }
+
+        .article {
+            display: flex;
+            flex-direction: row;
+            width: 6rem;
+            height: 3rem;
+
+            align-items: center;
+            margin: 0 0;
+            justify-content: space-between;
+
+            &:hover {
+                border-bottom: 3px solid $lenovo-red;
+                cursor: pointer;
+            }
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+
+            &:nth-child(8) {
+                margin-right: 0;
+            }
+
+            .img {
+                height: 2.5rem;
+                width: 2.5rem;
+
+
+            }
+
+            .name {
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                p {
+                    font-size: .8rem;
+                    color: black;
+
+
+                }
+            }
+
+            &:hover {
+                color: $lenovo-red;
+            }
+        }
+
+
+
+    }
+}
+
+@media (max-width:420px) {
+    main {
+        width: 100%;
+        padding: 0 3rem;
+        margin-bottom: 4rem;
+
+        .banner {
+            width: auto;
+            background-color: #6178f7;
+            min-height: 3rem;
+            margin: 1.5em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                text-align: center;
+                width: 100%;
+                color: white;
+            }
+
+        }
+
+        .shop {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+
+            .article {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 25%;
+                min-width: 15em;
+                height: auto;
+                min-height: 10rem;
+                background-color: $whiteish;
+                border-right: 1px solid $lighter-gray;
+                margin-bottom: 1em;
+
+                &:nth-child(4) {
+                    border-left: 1px solid $lighter-gray;
+                }
+
+                .label {
+                    width: 60%;
+                    margin: 1rem auto;
+
+                    height: 1rem;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-weight: lighter;
+                        font-size: .8rem;
+                        color: white;
+                    }
+                }
+
+                .article-img {
+                    width: 60%;
+                    height: 8rem;
+
+                    margin: 0 auto;
+                    margin-bottom: 1em;
+
+
+                }
+
+                text-align: center;
+
+                .title {
+                    margin: .5rem auto;
+                    width: 100%;
+
+                    .name {
+                        color: $blue;
+                        font-size: 1.1rem;
+                    }
+
+                    .slogan {
+                        color: $light-gray;
+                        font-size: .8rem;
+                        font-weight: lighter;
+                    }
+
+                }
+
+                .tag {
+                    .statement {
+                        font-size: .8rem;
+                    }
+
+                    .price {
+                        font-size: 1rem;
+                        font-weight: lighter;
+                    }
+
+                    .discount {
+                        font-size: .8rem;
+                        font-weight: lighter;
+                    }
+
+                    .coupon {
+                        font-size: .8rem;
+                        font-weight: bold;
+                        margin-bottom: .5rem;
+                    }
+
+                    .shipping {
+                        font-size: .8rem;
+                        font-weight: bold;
+                        margin-bottom: .2rem;
+                    }
+
+                    .free {
+                        color: $lenovo-red;
+                    }
+
+                    .rating {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        margin-bottom: 1rem;
+
+                        p {
+                            font-size: 1rem;
+                            color: $lenovo-red;
+
+                            &:nth-child(2) {
+                                align-items: center;
+                                font-size: .8rem;
+                                color: black
+                            }
+                        }
+                    }
+
+
+                }
+
+                .btn-shop {
+                    background-color: rgb(58, 158, 175);
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: lighter;
+                    width: 60%;
+                    height: 2rem;
+                    margin: 0 auto;
+                    align-items: center;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    border-radius: 8px;
+
+                    &:hover {
+                        background-color: #318486;
+                        cursor: pointer;
+
+                    }
+                }
+
+                .specs {
+                    display: flex;
+                    flex-direction: column;
+                    width: 60%;
+                    margin: 0 auto;
+
+                    .specs-element {
+                        border-bottom: 1px solid $lighter-gray;
+                        text-align: left;
+                        padding: .5rem 0;
+                        font-size: .9rem;
+                        line-height: .8rem;
+
+                        &:nth-child(5) {
+                            border-bottom: none;
+                        }
+
+                        .title {
+                            color: $light-gray;
+                        }
+
+                        .data-element {
+                            color: black;
+                        }
+                    }
+
+                    .extra {
+                        text-align: left;
+                        margin-top: .4rem;
+
+                        a {
+                            text-decoration: none;
+                            color: $blue;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    header {
+        .lenovo-menu {
+            .nav-btn {
+                display: flex;
+                border-radius: inherit;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .banner {
+
+                overflow: hidden;
+                min-width: 280px;
+
+                h1 {
+                    width: 50%;
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    padding-left: 1em;
+                    font-size: 1rem;
+                    font-weight: lighter;
+                    width: 50%;
+                }
+
+
+            }
+
+            nav {
+                width: 100%;
+                height: 0em;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-left: 1em;
+                overflow-y: hidden;
+
+
+
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        li {
+                            list-style: none;
+                            margin-right: 0;
+                            font-size: .8rem;
+
+
+
+                            &:nth-child(1) {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
+                    li {
+                        list-style: none;
+                        margin-right: 0;
+                        font-size: .8rem;
+
+
+
+                        &:nth-child(1) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                input {
+                    margin: 1em 0;
+                    font-size: .8rem;
+
+                }
+
+
+
+                .info-contact {
+                    margin-left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: .8rem;
+                    color: $light-gray;
+                    padding-right: 0;
+
+                    .support {
+                        display: flex;
+                        flex-flow: row nowrap;
+
+                        a {
+                            color: $light-gray;
+                            text-decoration: none;
+                            margin: 0 .5rem;
+                        }
+
+                        .chat {
+                            width: 1rem;
+                            height: 1rem;
+                            border: 1px solid $light-gray;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+                    }
+
+                    .personal-service {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: flex-end;
+
+                        .user {
+                            width: 1rem;
+                            height: 1rem;
+                            border: 1px solid $light-gray;
+                            border-radius: 50%;
+                            margin-right: .5rem;
+                        }
+
+                        .cart {
+                            width: 1rem;
+                            height: 1rem;
+                            border: 1px solid $light-gray;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .categories {
+        width: 100%;
+        max-height: 3rem;
+
+
+
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        overflow-y: visible;
+
+
+        .btn-absolute {
+            display: flex;
+
+        }
+
+        .active {
+            border-bottom: 3px solid $lenovo-red;
+
+            .name {
+                color: $lenovo-red;
+                font-weight: bold;
+            }
+        }
+
+        .article {
+            display: flex;
+            flex-direction: row;
+            width: 6rem;
+            height: 3rem;
+
+            align-items: center;
+            margin: 0 0;
+            justify-content: space-between;
+
+            &:hover {
+                border-bottom: 3px solid $lenovo-red;
+                cursor: pointer;
+            }
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+
+            &:nth-child(8) {
+                margin-right: 0;
+            }
+
+            .img {
+                height: 2.5rem;
+                width: 2.5rem;
+
+
+            }
+
+            .name {
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                p {
+                    font-size: .8rem;
+                    color: black;
+
+
+                }
+            }
+
+            &:hover {
+                color: $lenovo-red;
+            }
+        }
+
+
+
+    }
+}
