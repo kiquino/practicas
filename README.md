@@ -1,9 +1,8 @@
-# practicas
-Practicas laborales y ejercicios de profundización de conceptos
+# Prueba Lenovo
+Práctica laboral para Lenovo
 
-## Que tipo de proyectos hay acá?
-Principalmente objetivos cortos, secciónes independientes de un contexto comercial o publicitario.
+## En qué consistía?
+Replicar el maquetado sin utilizar librerias externas ni scripts. 
 
-### Indice de Branches
-  - Covid Api Request **React**
-  - MercadoLibre consultas sql **PHP SQL**
+Usé Flex para armar el maquetado y diseño responsivo.
+  
