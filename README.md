@@ -11,3 +11,5 @@ Principalmente objetivos cortos, secciónes independientes de un contexto comerc
   - Agnostic **HTML/SCSS/JS**
   - Domo **Javascript Api**
   - Trailers **Adobe Xd**
+  - App Bar **React Service**
+  - App Anime-List **React Api**
