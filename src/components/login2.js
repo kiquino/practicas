@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
+
 import axios, { Axios } from 'axios';
+import { Navigate,Link } from 'react-router-dom';
 
 const LoginForm = () => {
 
-    const [invalidForm, setInvalidForm] = React.useState(true);
-    const [datos,setDatos] = React.useState({
+    const [invalidForm, setInvalidForm] = useState(true);
+    const [datos,setDatos] = useState({
         email:"",
         password:""
     });
@@ -12,11 +14,15 @@ const LoginForm = () => {
 
     const sendRequest = () => {
         // Agregar lógica
-        axios.post('http://challenge-react.alkemy.org/', datos)
+        // axios.post('http://challenge-react.alkemy.org/', datos)
+
+        let path = '/init';
+        Navigate(path);
     }
 
     const handleChange = (event) => {
         // Actualizar el estado del formulario en base a los cambios de inputs 
+        console.log(event)
         setDatos((prevState) => ({
             ...prevState,
             [event.target.name]: event.target.value
@@ -32,13 +38,16 @@ const LoginForm = () => {
 
 
     return (
+        <div className="login">
+        <h1>Login</h1>
+
         <form>
-            <input type="email" name='email' onChange={ handleChange } value={datos.email} />
-            <input type="password" name='password' onChange={ handleChange } value={datos.password} />
-            <button disabled={ invalidForm } onClick={ sendRequest } > Enviar </button>
+            <input type="email" name='email'aria-label='aligeri' onChange={ handleChange } value={datos.email} />
+            <input type="password" aria-label='dante' name='password' onChange={ handleChange } value={datos.password} />
+            <Link to="/init" disabled={ invalidForm } onClick={ sendRequest } > Enviar </Link>
        
         </form>
-        
+        </div>
       
     )
 
